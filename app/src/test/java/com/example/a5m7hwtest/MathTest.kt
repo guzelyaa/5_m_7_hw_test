@@ -35,7 +35,7 @@ class MathTest {
     }
 
     @Test
-    fun negativeAddCade(){
+    fun negativeAddCase(){
         assertEquals("Нельзя складывать отрицательные числа!", math?.add("-2", "-2"))
     }
 
