@@ -14,29 +14,24 @@ class MathTest {
         math = Math()
     }
 
-    @Test
-    fun simpleAdd() {
+    @Test    fun simpleAdd() {
         assertEquals("6", math?.add("3", "3"))
     }
 
-    @Test
-    fun checkEmpty() {
-        assertEquals("Вы не заполнили поле!", math?.add("", "4"))
+    @Test    fun checkEmpty() {
+        assertEquals("Вы не заполнили поле!", math?.add("", ""))
     }
 
-    @Test
-    fun checkNumber() {
+    @Test    fun checkNumber() {
         assertEquals("Нельзя складывать буквы!", math?.add("ываыаы", "аывпып"))
     }
 
-    @Test
-    fun dotAddCade(){
+    @Test    fun dotAddCade(){
         assertEquals("4.0", math?.add("2.0", "2.0"))
     }
 
-    @Test
-    fun negativeAddCase(){
-        assertEquals("Нельзя складывать отрицательные числа!", math?.add("-2", "-2"))
+    @Test    fun negativeAddCase(){
+        assertEquals("-4", math?.add("-2", "-2"))
     }
 
     @After
